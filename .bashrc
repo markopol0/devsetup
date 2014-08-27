@@ -1,4 +1,5 @@
 # .bash_profile
+export PATH=/opt/centos/devtoolset-1.1/root/usr/bin/:$PATH
 
 alias climate="cd /prod/www/template/manmade/Pages/Climate"
 alias graphics="cd /mnt/s3/prod/www/apache/htdocs/data/climate_images"
@@ -34,7 +35,7 @@ PATH=$PATH:$HOME/bin
 
 export PATH
 
-export PS1="\[$(tput bold)\](\t)[\[$(tput setaf 6)\]\u@\h\[$(tput setaf 2)\] \w]>\[$(tput sgr0)\]"
+export PS1="\[$(tput bold)\](\t)[\[$(tput setaf 6)\]\u@\h\[$(tput setaf 2)\] \w]> \[$(tput sgr0)\]"
 
 #Make git log awesome
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
