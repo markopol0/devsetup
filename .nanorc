@@ -1,0 +1,43 @@
+set autoindent
+set boldtext
+set smooth
+set const
+set nohelp
+set morespace
+set mouse
+set multibuffer
+set tabsize 2
+set historylog
+set tabstospaces
+
+syntax "C/C++" "\.(c|h|cpp|php|js|bashrc|bash_profile)$"
+color cyan "#.*"
+color brightred "//.*"
+color brightmagenta "<<<.*"
+color brightred start="\/\*" end="\*/"
+#color brightmagenta "WTF|GTFO|IMP"
+
+syntax "Python" "\.py$"
+color cyan "import"
+color brightred "#.*"
+#color brightred "['][^']*[^\\][']" "[']{3}.*[^\\][']{3}"
+#color brightred "["][^"]*[^\\]["]" "["]{3}.*[^\\]["]{3}"
+color brightred start=""""[^"]" end=""""" start="'''[^']" end="'''"
+color brightmagenta "<<<.*"
+
+syntax "HTML" "\.(html|cst)$"
+color cyan "#.*"
+color cyan "<"
+color cyan ">"
+color brightyellow "</"
+color brightred start="<!--" end="-->"
+color Brightmagenta "<<<.*"
+
+syntax "CSS" "\.css$"
+color brightred start="\/\*" end="\*/"
+color Brightmagenta "<<<.*"
+
+syntax "PERL" "\.pl$"
+color brightred "#.*"
+
+
