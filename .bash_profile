@@ -37,6 +37,7 @@ export PATH
 export GIT_EDITOR=nano
 # http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
 # http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/
+# curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
 source ~/.git-prompt.sh
 export PS1="\[$(tput bold)\](\t)[\[$(tput setaf 6)\]\u@\h\[\$(tput setaf 2)\] \w]\[$(tput setaf 5)\]\$(__git_ps1) > \[$(tput sgr0)\]"
 
