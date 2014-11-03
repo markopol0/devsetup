@@ -19,6 +19,8 @@ alias cdbrands="cd /software/dist/newspaper/newspaper/brands"
 alias cdpapers="cd /software/dist/newspaper/newspaper/papers"
 alias cdscrapers="cd /prod/www/apache/htdocs/autoasp/scrapers"
 alias cdmachines="cd /software/dist/types"
+alias gg="grep -inr --color -B 1 -A 1"
+
 #alias gitlog = "$ git log --all --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
 # Source global definitions
@@ -33,7 +35,7 @@ export WUI_BUILD_ROOT=/code
 PATH=$PATH:$HOME/bin
 
 export PATH
-
+export EDITOR="nano"
 export GIT_EDITOR=nano
 # http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
 # http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/
