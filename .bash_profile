@@ -19,7 +19,7 @@ alias cdbrands="cd /software/dist/newspaper/newspaper/brands"
 alias cdpapers="cd /software/dist/newspaper/newspaper/papers"
 alias cdscrapers="cd /prod/www/apache/htdocs/autoasp/scrapers"
 alias cdmachines="cd /software/dist/types"
-alias gg="grep -inr --color -B 1 -A 1"
+alias gg="grep -inr --color -B 1 -A 1 --exclude *.min.js"
 
 #alias gitlog = "$ git log --all --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
