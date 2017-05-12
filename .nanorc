@@ -4,16 +4,15 @@ set smooth
 set const
 set nohelp
 set morespace
-set mouse
 set multibuffer
 set tabsize 2
 set historylog
 set tabstospaces
 
-syntax "C/C++" "\.(c|h|cpp|php|js|bashrc|bash_profile)$"
+syntax "C/C++" "\.(c|h|cpp|bashrc|bash_profile)$"
 color cyan "#.*"
 color brightred "//.*"
-color brightmagenta "<<<.*"
+color Brightmagenta "<<<.*"
 color brightred start="\/\*" end="\*/"
 #color brightmagenta "WTF|GTFO|IMP"
 
@@ -23,9 +22,9 @@ color brightred "#.*"
 #color brightred "['][^']*[^\\][']" "[']{3}.*[^\\][']{3}"
 #color brightred "["][^"]*[^\\]["]" "["]{3}.*[^\\]["]{3}"
 color brightred start=""""[^"]" end=""""" start="'''[^']" end="'''"
-color brightmagenta "<<<.*"
+color Brightmagenta "<<<.*"
 
-syntax "HTML" "\.(html|cst)$"
+syntax "HTML" "\.html$"
 color cyan "#.*"
 color cyan "<"
 color cyan ">"
@@ -40,4 +39,15 @@ color Brightmagenta "<<<.*"
 syntax "PERL" "\.pl$"
 color brightred "#.*"
 
-
+syntax "php" ".*/*.php$"
+color white "\{|\}|\."
+color cyan "('[^']*')"
+color cyan "\"[^\"]*\""
+color brightmagenta "(\$([[:alpha:]_]|->)*)"
+color brightgreen "((\$(([[:alpha:]_0-9])+\->)+)[[:alpha:]_0-9]+\()"
+color yellow " (if|else if|else|return|case|break)"
+color yellow "\|\||\?|!|\||&&|=|;|\(|\)"
+color brightred "false|true"
+color white "[[:space:]]+debug|[[:space:]]+echo|\$this\->debug"
+color brightred "//.*"
+color brightred start="/\*" end="\*/"

@@ -22,6 +22,9 @@ alias cdpapers="cd /software/dist/newspaper/newspaper/papers"
 alias cdscrapers="cd /prod/www/apache/htdocs/autoasp/scrapers"
 alias cdmachines="cd /software/dist/types"
 
+db() { ssh -i .ssh/WUTECH.pem ec2-user@int-"$1"; sudo su -;}
+
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 		. /etc/bashrc
@@ -31,11 +34,14 @@ export WUI_BUILD_ROOT=/code
 
 # User specific environment and startup programs
 
-PATH=$PATH:$HOME/bin
+PATH=$PATH:$HOME/bin:/usr/local/bin/
 
 export PATH
 
-export PS1="\[$(tput bold)\](\t)[\[$(tput setaf 6)\]\u@\h\[$(tput setaf 2)\] \w]> \[$(tput sgr0)\]"
+# http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
+# http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/
+source ~/.git-prompt.sh
+export PS1="\[$(tput bold)\](\t)[\[$(tput setaf 6)\]\u@\h\[\$(tput setaf 2)\] \w]\[$(tput setaf 5)\]\$(__git_ps1) > \[$(tput sgr0)\]"
 
 #Make git log awesome
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
